@@ -1,0 +1,24 @@
+<div class="margin-auto">
+  <div class="create">
+    <p-messages [(value)]="msgs"></p-messages>
+  
+    <h1>Create Customer</h1>
+    <div [hidden]="submitted" style="width: 300px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group margin-top">        
+          <input type="text" pInputText id="name" placeholder="Name..." required [(ngModel)]="customer.name" name="name"/> 
+        </div>
+    
+        <div class="form-group margin-top">
+          <input type="text" pInputText id="age" placeholder="Age..." [(ngModel)]="customer.age" name="age"/>
+        </div>
+    
+        <button pButton type="submit" label="Submit" class="margin-top"></button>
+      </form>
+    </div>
+    
+    <div [hidden]="!submitted">
+      <button pButton type="button" label="Add" (click)="newCustomer()" ></button>
+    </div>
+  </div>
+</div>
