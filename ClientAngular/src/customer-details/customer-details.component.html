@@ -13,6 +13,6 @@
  
   <button pButton type="submit" label="Inactive" *ngIf='customer.active' (click)='updateActive(false)' class="ui-button-rounded ui-button-warning button"></button>
   <button pButton type="submit" label="Active" *ngIf='!customer.active' (click)='updateActive(true)' class="ui-button-rounded ui-button-warning button"></button>
-  <button pButton type="submit" label="Delete" *ngIf='!customer.active' (click)='deleteCustomer()' class="ui-button-rounded ui-button-danger button"></button>
+  <button pButton type="submit" label="Delete"  (click)='deleteCustomer()' class="ui-button-rounded ui-button-danger button"></button>
 
 </div>
