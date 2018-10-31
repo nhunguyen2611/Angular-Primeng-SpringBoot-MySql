@@ -1,0 +1,13 @@
+
+  <div class="ui-g-4 pink" >
+    <h1>Customers</h1>
+
+    <div *ngFor="let customer of customers | async">
+      <app-customer-details [customer]='customer'></app-customer-details>
+    </div>
+
+    <div class="button">
+      <button pButton type="submit" label="DeleteAll" (click)='deleteCustomers()' class="ui-button-rounded ui-button-danger "></button>
+    </div>
+  </div>
+  
